@@ -1,0 +1,37 @@
+{
+  "jdsl/test_kv": {
+    "dbName": "db",
+    "sTableName": "stb_kv",
+    "tableName": "$ver$",
+    "keep": 365,
+    "tagsMap": {
+      "type": "$ver$"
+    },
+    "payloadTemplate": "{\"$ver$\":\"$value$\"}",
+    "value": "$value$"
+  },
+
+  "jdsl/test_iot": {
+    "dbName": "db",
+    "sTableName": "stb_iot",
+    "tableName": "$pointName$",
+    "keep": 365,
+    "tagsMap": {
+      "device": "$device$"
+    },
+    "payloadTemplate": "{\"device\":\"$device$\",\"point\":{\"pointName\":\"$pointName$\",\"value\":[\"$value$\"]}}",
+    "value": "$value$"
+  },
+
+  "jdsl/test_topic/$test$": {
+    "dbName": "db",
+    "sTableName": "stb_topic",
+    "tableName": "$test$",
+    "keep": 365,
+    "tagsMap": {
+      "test": "test"
+    },
+    "payloadTemplate": "\"$value$\"",
+    "value": "$value$"
+  }
+}
